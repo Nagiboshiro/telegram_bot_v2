@@ -13,6 +13,7 @@ const App = () => {
     return (
         <div>
             <Header/>
+            <span>{tg.initDataUnsafe?.user?.username}</span>
             <button onClick={onToggleButton}>toggle</button>
         </div>
     );
