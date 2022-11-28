@@ -60,7 +60,6 @@ const ProductList = () => {
 
         })
 
-        tg.sendData(JSON.stringify(data));
     }, [addedItems])
 
     useEffect(() => {
