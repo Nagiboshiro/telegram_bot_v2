@@ -81,7 +81,6 @@ const ProductList = () => {
                 />
 
             ))}
-            PRODUCT LIST
         </div>
     );
 };
