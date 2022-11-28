@@ -52,7 +52,7 @@ const ProductList = () => {
         }
 
         fetch('http://109.71.13.131:8000/web-data', {
-            method: 'Post',
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -61,7 +61,7 @@ const ProductList = () => {
         })
 
         tg.sendData(JSON.stringify(data));
-    }, [])
+    }, [addedItems])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
