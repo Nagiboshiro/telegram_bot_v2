@@ -19,9 +19,11 @@ const Form = () => {
     }, [])
 
     useEffect(() => {
-        tg.monitorEventLoopDelay('mainButtonClicked', onSendData)
+        tg.onEvent('mainButtonClicked', onSendData)
 
-        return tg.offEvent('mainButtonClicked', onSendData)
+       return () => {
+           tg.offEvent('mainButtonClicked', onSendData)
+        }
     }, [])
 
     useEffect(() => {
