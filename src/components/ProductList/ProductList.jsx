@@ -13,16 +13,16 @@ const products = [
 ]
 
 const getTotalPrice = (items = []) => {
-  return items.reduce((acc, item) => {
-      return acc += item.price
-  }, 0)
+    return items.reduce((acc, item) => {
+        return acc += item.price
+    }, 0)
 }
 
 const ProductList = () => {
     const [addedItems, setAddedItems] = useState([])
     const {tg, queryId} = useTelegram()
 
-    const onSendData = useCallback( () => {
+    const onSendData = useCallback(() => {
         const data = {
             products: addedItems,
             totalPrice: getTotalPrice(addedItems),
@@ -30,7 +30,7 @@ const ProductList = () => {
         }
 
 
-         fetch('http://77.91.73.244:8000/web-data', {
+        fetch('http://77.91.73.244:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -49,10 +49,11 @@ const ProductList = () => {
         }
 
 
-         fetch('http://77.91.73.244:8000/web-data', {
+        fetch('http://77.91.73.244:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'access-control-allow-origin': '*'
             },
             body: JSON.stringify(data)
 
