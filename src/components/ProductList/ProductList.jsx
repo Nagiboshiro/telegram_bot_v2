@@ -73,8 +73,6 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
-            <span>{tg.initData}</span>
-            <span>{tg.initDataUnsafe}</span>
             {products.map(item => (
                 <ProductItem
                     product={item}
