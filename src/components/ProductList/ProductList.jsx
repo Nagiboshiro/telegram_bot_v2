@@ -29,6 +29,9 @@ const ProductList = () => {
             queryId,
         }
 
+        console.log(tg.initDataUnsafe)
+        console.log(tg.initData)
+
 
         fetch('http://77.91.73.244:8000/web-data', {
             method: 'POST',
