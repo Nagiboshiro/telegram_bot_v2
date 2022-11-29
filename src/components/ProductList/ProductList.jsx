@@ -70,7 +70,7 @@ const ProductList = () => {
         return () => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
-    }, [onSendData])
+    }, [])
 
     return (
         <div className={'list'}>
