@@ -40,10 +40,12 @@ const ProductList = () => {
 
     }, [addedItems])
 
+
+    const [test, setTest] = useState()
     const testget = async () => {
         const data = await fetch('http://77.91.73.244:8000/test');
 
-        return data
+        setTest(data.data)
     }
 
     useEffect(() => {
@@ -79,6 +81,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
+            <span>{test}</span>
             <button onClick={testget}>test gget</button>
             {products.map(item => (
                 <ProductItem
