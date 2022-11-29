@@ -30,7 +30,7 @@ const ProductList = () => {
         }
 
 
-        fetch('http://77.91.73.244:8000/web-data', {
+        fetch('http://localhost:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -40,22 +40,6 @@ const ProductList = () => {
         })
 
     }, [addedItems])
-
-    const test = () => {
-        const data = {
-            products: addedItems,
-            totalPrice: getTotalPrice(addedItems),
-            queryId,
-        }
-
-
-        fetch('http://77.91.73.244:8000/web-data', {
-            method: 'POST',
-            body: JSON.stringify(data)
-
-        })
-    }
-
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
@@ -90,7 +74,6 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
-            <button onClick={test}>test</button>
             {products.map(item => (
                 <ProductItem
                     product={item}
