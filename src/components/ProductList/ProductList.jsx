@@ -41,7 +41,7 @@ const ProductList = () => {
     }, [addedItems])
 
 
-    const [test, setTest] = useState()
+    const [test, setTest] = useState('1')
     const testget = async () => {
         const data = await fetch('http://77.91.73.244:8000/test');
 
