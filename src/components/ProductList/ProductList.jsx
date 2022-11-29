@@ -74,6 +74,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
+            <button onClick={onSendData}>send</button>
             {products.map(item => (
                 <ProductItem
                     product={item}
