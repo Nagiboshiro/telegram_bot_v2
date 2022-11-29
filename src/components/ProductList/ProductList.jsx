@@ -22,7 +22,7 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([])
     const {tg, queryId} = useTelegram()
 
-    const onSendData = useCallback(() => {
+    const onSendData = useCallback(async () => {
         const data = {
             products: addedItems,
             totalPrice: getTotalPrice(addedItems),
@@ -30,7 +30,7 @@ const ProductList = () => {
         }
 
 
-        fetch('http://77.91.73.244:8000/web-data', {
+        await fetch('http://77.91.73.244:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -81,7 +81,6 @@ const ProductList = () => {
                     onAdd={onAdd}
                     className={'item'}
                 />
-
             ))}
         </div>
     );

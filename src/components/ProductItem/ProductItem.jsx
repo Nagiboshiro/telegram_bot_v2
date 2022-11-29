@@ -6,7 +6,7 @@ import './ProductItem.css'
 const ProductItem = ({product, className, onAdd}) => {
     
     const onAddHandler = () => {
-      onAdd(product);
+        onAdd(product);
     }
     return (
         <div className={'product' + className}>
