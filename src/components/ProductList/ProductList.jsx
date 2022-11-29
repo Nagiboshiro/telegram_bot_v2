@@ -30,7 +30,7 @@ const ProductList = () => {
         }
 
 
-        fetch('http://localhost:8000/web-data', {
+        fetch('http://77.91.73.244:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
