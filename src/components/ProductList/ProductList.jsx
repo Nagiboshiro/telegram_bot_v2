@@ -93,7 +93,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
-            <button onClick={onSendData}>test</button>
+            <button onClick={test}>test</button>
             {products.map(item => (
                 <ProductItem
                     product={item}
