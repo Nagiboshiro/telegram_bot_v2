@@ -24,9 +24,9 @@ const ProductList = () => {
 
     const onSendData = useCallback(async () => {
         const data = {
-            products: [],
-            totalPrice: '32',
-            queryId: 'suka',
+            products: addedItems,
+            totalPrice: getTotalPrice(addedItems),
+            queryId,
         }
 
 
@@ -75,6 +75,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
+            <button onClick={onSendData}>test</button>
             {products.map(item => (
                 <ProductItem
                     product={item}
