@@ -40,6 +40,12 @@ const ProductList = () => {
 
     }, [addedItems])
 
+    const testget = async () => {
+        const data = await fetch('http://77.91.73.244:8000/test');
+
+        return data
+    }
+
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
 
@@ -73,6 +79,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
+            <button onClick={testget}>test get</button>
             {products.map(item => (
                 <ProductItem
                     product={item}
