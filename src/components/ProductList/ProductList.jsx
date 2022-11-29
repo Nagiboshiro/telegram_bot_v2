@@ -24,8 +24,8 @@ const ProductList = () => {
 
     const onSendData = useCallback(async () => {
         const data = {
-            products: addedItems,
-            totalPrice: getTotalPrice(addedItems),
+            products: [],
+            totalPrice: '32',
             queryId: 'suka',
         }
 
