@@ -79,7 +79,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
-            <button onClick={testget}>test get</button>
+            <button onClick={testget}>test gget</button>
             {products.map(item => (
                 <ProductItem
                     product={item}
